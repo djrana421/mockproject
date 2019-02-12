@@ -1,0 +1,70 @@
+<div class="container">
+<header>
+<div >
+
+    <span class="search_img"><img src="assets\image\zoom-in.png"width="25px" height="25px"></span> 
+    <input  type="text" size="40px" placeholder="">
+    <span class="cancel_img"><img src="assets\image\cancle.bmp" width="25px" height="25px"></span>
+    <span class="name"><h3>Peter Hoang</h3> </span>
+    <span class="user_img"><img src="assets\image\user.png"width="55px" height="55px"></span>
+
+</div> 
+</header>
+
+<aside>
+   <div class="box1" *ngFor='let i of result' (click)="showdata(i.img, i.Description)"><h2>{{i.name}}<span><img class="aside_arrowimg1" src="assets\image\NextMenuButtonIconSubpictur.png" width="25px" height="25px"></span></h2></div>
+  <!--><div class="box1" ><h2>Frank Wang<span><img class="aside_arrowimg2" src="assets\image\NextMenuButtonIconSubpictur.png" width="25px" height="25px"></span></h2></div>
+  <div class="box1" ><h2>Sissi Chen <span><img class="aside_arrowimg2" src="assets\image\NextMenuButtonIconSubpictur.png" width="25px" height="25px"></span></h2></div>
+  <div class="box1" ><h2>Diego Garcia<span><img class="aside_arrowimg3" src="assets\image\NextMenuButtonIconSubpictur.png" width="25px" height="25px"></span></h2></div>
+  <div class="box1" ><h2>Fuad Rashid<span><img class="aside_arrowimg3" src="assets\image\NextMenuButtonIconSubpictur.png" width="25px" height="25px"></span></h2></div>
+-->
+</aside>
+
+<section class="section">
+
+  <img class="section_img" src="{{img}}" alt="person" width="125px" height="125px"> 
+     <span><button class="section_button">Send Message</button></span><br>
+     <span><img class="section_heartimg" src="assets\image\heart.png" alt="person" width="25px" height="25px"></span>
+     <span><img class="section_heartimg1" src="assets\image\heart.png" alt="person" width="25px" height="25px"></span>
+     <span><img class="section_heartimg2" src="assets\image\heart.png" alt="person" width="25px" height="25px"></span>
+     <span><img class="section_heartimg3" src="assets\image\heart.png" alt="person" width="25px" height="25px"></span>
+     <span><img class="section_heartimg4" src="assets\image\heart.png" alt="person" width="25px" height="25px"></span>
+
+</section>
+
+<p class="par" >{{desc}}</p>
+
+<div class="table" >
+<table >
+  <tr >
+  <th class="likes" >Likes</th>
+  <th class="dislikes">Dislikes</th>
+  </tr>
+
+     <tr *ngFor="let i  of result; let j of result">
+      <td class="likes" >{{i.like}}</td>
+      <td class="dislikes">{{j.dislike}} </td>
+     </tr>
+    
+     
+          <!-- <td class="likes">{{i.Likes[1]}}</td>
+          <td class="dislikes">{{i.Dislikes[1]}}</td>
+          </tr>
+    <       <tr>
+              <td class="likes">{{i.Likes[2]}}</td>
+              <td class="dislikes">{{i.Dislikes[2]}}</td>
+              </tr>
+          <tr>
+              <td class="likes">{{i.Likes[3]}}</td>
+              <td class="dislikes">{{i.Dislikes[3]}}</td>
+         </tr>
+         <tr>
+            <td class="likes">{{i.Likes[4]}}</td>
+            <td class="dislikes">{{i.Dislikes[4]}}</td>
+       </tr>
+          -->
+        
+</table>
+</div>
+</div>
+ 
